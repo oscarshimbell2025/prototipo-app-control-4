@@ -2,14 +2,17 @@
 
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<title>Pantalla1</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
+  <meta charset="UTF-8" />
+  <title>Demo — App Control de Obra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body { margin: 0; padding: 24px; background:#fafafa; }
+    h1 { font-size: 20px; margin: 0 0 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    a.card {
+      display:block; text-decoration:none; color:inherit; border:1px solid #e5e7eb; border-radius:12px;
+      background:#fff; padding:12px; transition: box-shadow .2s, transform .05s;
     }
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -55,58 +58,21 @@
   </style>
 </head>
 <body>
-  <h1>Pantallas</h1>
+  <h1>Prototipo navegable</h1>
   <div class="grid">
-    <a class="card" href="pantalla1.html">
-      <img class="thumb" src="img/pantalla1.png" alt="Pantalla 1"/>
-      <div class="title">Pantalla 1</div>
-    </a>
-    <a class="card" href="pantalla2.html">
-      <img class="thumb" src="img/pantalla2.png" alt="Pantalla 2"/>
-      <div class="title">Pantalla 2</div>
-    </a>
-    <a class="card" href="pantalla3.html">
-      <img class="thumb" src="img/pantalla3.png" alt="Pantalla 3"/>
-      <div class="title">Pantalla 3</div>
-    </a>
-    <a class="card" href="pantalla4.html">
-      <img class="thumb" src="img/pantalla4.png" alt="Pantalla 4"/>
-      <div class="title">Pantalla 4</div>
-    </a>
-    <a class="card" href="pantalla5.html">
-      <img class="thumb" src="img/pantalla5.png" alt="Pantalla 5"/>
-      <div class="title">Pantalla 5</div>
-    </a>
-    <a class="card" href="pantalla6.html">
-      <img class="thumb" src="img/pantalla6.png" alt="Pantalla 6"/>
-      <div class="title">Pantalla 6</div>
-    </a>
-    <a class="card" href="pantalla7.html">
-      <img class="thumb" src="img/pantalla7.png" alt="Pantalla 7"/>
-      <div class="title">Pantalla 7</div>
-    </a>
-    <a class="card" href="pantalla8.html">
-      <img class="thumb" src="img/pantalla8.png" alt="Pantalla 8"/>
-      <div class="title">Pantalla 8</div>
-    </a>
-    <a class="card" href="pantalla9.html">
-      <img class="thumb" src="img/pantalla9.png" alt="Pantalla 9"/>
-      <div class="title">Pantalla 9</div>
-    </a>
-    <a class="card" href="pantalla10.html">
-      <img class="thumb" src="img/pantalla10.png" alt="Pantalla 10"/>
-      <div class="title">Pantalla 10</div>
-    </a>
-    <a class="card" href="pantalla11.html">
-      <img class="thumb" src="img/pantalla11.png" alt="Pantalla 11"/>
-      <div class="title">Pantalla 11</div>
-    </a>
-    <a class="card" href="pantalla12.html">
-      <img class="thumb" src="img/pantalla12.png" alt="Pantalla 12"/>
-      <div class="title">Pantalla 12</div>
-    </a>
+    <a class="card" href="pantalla1.html"><img class="thumb" src="img/pantalla1.png"><div class="title">pantalla1</div></a>
+    <a class="card" href="pantalla2.html"><img class="thumb" src="img/pantalla2.png"><div class="title">pantalla2</div></a>
+    <a class="card" href="pantalla3.html"><img class="thumb" src="img/pantalla3.png"><div class="title">pantalla3</div></a>
+    <a class="card" href="pantalla4.html"><img class="thumb" src="img/pantalla4.png"><div class="title">pantalla4</div></a>
+    <a class="card" href="pantalla5.html"><img class="thumb" src="img/pantalla5.png"><div class="title">pantalla5</div></a>
+    <a class="card" href="pantalla6.html"><img class="thumb" src="img/pantalla6.png"><div class="title">pantalla6</div></a>
+    <a class="card" href="pantalla7.html"><img class="thumb" src="img/pantalla7.png"><div class="title">pantalla7</div></a>
+    <a class="card" href="pantalla8.html"><img class="thumb" src="img/pantalla8.png"><div class="title">pantalla8</div></a>
+    <a class="card" href="pantalla9.html"><img class="thumb" src="img/pantalla9.png"><div class="title">pantalla9</div></a>
+    <a class="card" href="pantalla10.html"><img class="thumb" src="img/pantalla10.png"><div class="title">pantalla10</div></a>
+    <a class="card" href="pantalla11.html"><img class="thumb" src="img/pantalla11.png"><div class="title">pantalla11</div></a>
+    <a class="card" href="pantalla12.html"><img class="thumb" src="img/pantalla12.png"><div class="title">pantalla12</div></a>
   </div>
-  <script src="js/main.js"></script>
 </body>
 </html>
 
