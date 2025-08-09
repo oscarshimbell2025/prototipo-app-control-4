@@ -1,12 +1,27 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
+<meta charset="utf-8"/>
+<title>Pantalla1</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contenido</title>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
     body {
+      background: url('img/pantalla1.png') no-repeat center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-color: #fff;
       padding: 20px;
     }
     .grid {
@@ -14,6 +29,9 @@
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 20px;
     }
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
     a.card {
       text-decoration: none;
       color: inherit;
@@ -92,3 +110,4 @@
 </body>
 </html>
 
+<div onclick="window.location.href='pantalla3.html'" style="position:absolute;top:57.5%;left:20.51%;width:58%;height:5%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
