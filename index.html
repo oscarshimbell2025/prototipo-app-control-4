@@ -1,15 +1,39 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-
+<meta charset="utf-8"/>
+<title>Pantalla1</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
-    a.card:hover { box-shadow:0 6px 18px rgba(0,0,0,.08); }
-    a.card:active { transform: translateY(1px); }
-    .thumb { width:100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 8px; background:#f3f4f6; }
-    .title { margin-top:8px; font-weight:600; font-size:14px; }
+    body {
+      background: url('img/pantalla1.png') no-repeat center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-color: #fff;
+    }
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      border-radius: 8px;
+    }
   </style>
+  <meta charset="utf-8"/>
+  <meta http-equiv="refresh" content="0; url=pantalla1.html"/>
+  <title>Redirigiendo</title>
 </head>
 <body>
 
+<div onclick="window.location.href='pantalla3.html'" style="position:absolute;top:57.5%;left:20.51%;width:58%;height:5%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
+  <p>Redirigiendo a la pantalla principal...</p>
+  <noscript>
+    <p><a href="pantalla1.html">Ir a la pantalla principal</a></p>
+  </noscript>
 </body>
 </html>
