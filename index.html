@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <title>Pantalla1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    body {
-      background-image: url('img/pantalla1.png');
+
     }
+    a.card:hover { box-shadow:0 6px 18px rgba(0,0,0,.08); }
+    a.card:active { transform: translateY(1px); }
+    .thumb { width:100%; aspect-ratio: 9/16; object-fit: cover; border-radius: 8px; background:#f3f4f6; }
+    .title { margin-top:8px; font-weight:600; font-size:14px; }
   </style>
 </head>
 <body>
-  <form class="form-container" onsubmit="login(event)">
-    <label for="usuario">Usuario</label>
-    <input type="text" id="usuario" name="usuario" aria-label="Usuario" required>
-    <label for="contrasena">Contraseña</label>
-    <input type="password" id="contrasena" name="contrasena" aria-label="Contraseña" required>
-    <button type="submit">Ingresar</button>
-  </form>
-  <script src="js/main.js"></script>
+
 </body>
 </html>
