@@ -17,13 +17,36 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: top;
+      background-color: #fff;
+    }
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+      border-radius: 8px;
       
     }
   </style>
 </head>
 <body>
+  <!-- hotspots for activity registration -->
+  <div class="hotspot" style="top:25%;left:15%;width:40%;height:3.55%;z-index:999;" onclick="openClima()"></div>
+  <div class="hotspot" style="top:31%;left:15%;width:40%;height:3.55%;z-index:999;" onclick="openPersonal()"></div>
+  <div class="hotspot" style="top:37%;left:15%;width:40%;height:3.55%;z-index:999;" onclick="openMaquina()"></div>
+  <div class="hotspot" style="top:43%;left:15%;width:40%;height:3.55%;z-index:999;" onclick="openAvance()"></div>
+  <div class="hotspot" style="top:49%;left:15%;width:40%;height:3.55%;z-index:999;" onclick="openInstrucciones()"></div>
+  <div class="hotspot" style="top:55%;left:15%;width:40%;height:3.55%;z-index:999;" onclick="openVientos()"></div>
+  <div class="hotspot" style="top:61%;left:15%;width:40%;height:3.55%;z-index:999;" onclick="openFotos()"></div>
+  <div class="hotspot" style="top:82%;left:25.64%;width:51.28%;height:6%;z-index:999;" onclick="alert('📤 Informe enviado')"></div>
+  <div class="hotspot" style="top:6%;left:13%;width:15%;height:7%;z-index:999;" onclick="window.location.href='pantalla2.html'"></div>
+
+  <div id="personal-info" class="info" style="top:31%;left:60%;"></div>
+  <div id="avance-info" class="info" style="top:43%;left:60%;"></div>
+  <div id="fotos-container"></div>
 
 
 
-
-<div class="hotspot" onclick="alert('✅ Checklist marcado')" style="position:absolute;top:25%;left:15%;width:40%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('✅ Checklist marcado')" style="position:absolute;top:31%;left:15%;width:40%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('✅ Checklist marcado')" style="position:absolute;top:37%;left:15%;width:40%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('✅ Checklist marcado')" style="position:absolute;top:43%;left:15%;width:40%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('📤 Informe enviado')" style="position:absolute;top:82%;left:25.64%;width:51.28%;height:6%;z-index:999;"></div><div class="hotspot" onclick="window.location.href='pantalla2.html'" style="position:absolute;top:6%;left:13%;width:15%;height:7%;z-index:999;"></div></body></html>
+<div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:25%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:31%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:37%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:43%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('📤 Informe enviado')" style="position:absolute;top:82%;left:25.64%;width:51.28%;height:6%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla2.html'" style="position:absolute;top:6%;left:13%;width:15%;height:7%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
+  <div id="modal" class="modal hidden"><div id="modal-content" class="modal-content"></div></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
