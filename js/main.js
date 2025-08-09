@@ -191,3 +191,53 @@ if (typeof document !== 'undefined') {
   });
 }
 
+function generatePantalla5PDF(){
+  const { jsPDF } = window.jspdf || {};
+  if(!jsPDF){
+    alert('jsPDF no disponible');
+    return;
+  }
+  const doc = new jsPDF();
+  let y = 10;
+  const clima = localStorage.getItem('clima');
+  if (clima) { doc.text('Clima: ' + clima, 10, y); y += 10; }
+  const personal = localStorage.getItem('personalCantidad');
+  if (personal) { doc.text('Personal: ' + personal, 10, y); y += 10; }
+  const avance = localStorage.getItem('avance');
+  if (avance) { doc.text('Avance físico: ' + avance + '%', 10, y); y += 10; }
+  const vientos = localStorage.getItem('vientos');
+  if (vientos) { doc.text('Vientos: ' + vientos, 10, y); y += 10; }
+  const maquinaDesc = localStorage.getItem('maquinaDesc');
+  if (maquinaDesc) { doc.text('Maquinaria: ' + maquinaDesc, 10, y); y += 10; }
+  const imgs=[...JSON.parse(localStorage.getItem('maquinaFotos')||'[]'),
+              ...JSON.parse(localStorage.getItem('extraFotos')||'[]')];
+  imgs.forEach(src=>{
+    if (y > 270) { doc.addPage(); y = 10; }
+    try {
+      doc.addImage(src, 'JPEG', 10, y, 180, 100);
+      y += 105;
+    } catch(e) {
+      console.error('No se pudo agregar la imagen al PDF', e);
+    }
+  });
+  const dataUri = doc.output('datauristring');
+  localStorage.setItem('pantalla5pdf', dataUri);
+  alert('Informe generado');
+}
+
+function exportPantalla5PDF(){
+  const data = localStorage.getItem('pantalla5pdf');
+  if(!data){
+    alert('No hay informe generado');
+    return;
+  }
+  const link=document.createElement('a');
+  link.href=data;
+  link.download='informe.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  alert('PDF exportado');
+  localStorage.removeItem('pantalla5pdf');
+}
+
