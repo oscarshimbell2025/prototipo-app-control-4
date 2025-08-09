@@ -1,14 +1,112 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
+<meta charset="utf-8"/>
+<title>Pantalla1</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
   <meta charset="utf-8"/>
-  <meta http-equiv="refresh" content="0; url=pantalla1.html"/>
-  <title>Redirigiendo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contenido</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    body {
+      background: url('img/pantalla1.png') no-repeat center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-color: #fff;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+    a.card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    a.card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+    a.card:active { transform: translateY(1px); }
+    .thumb {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #f3f4f6;
+    }
+    .title {
+      margin-top: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirigiendo a la pantalla principal...</p>
-  <noscript>
-    <p><a href="pantalla1.html">Ir a la pantalla principal</a></p>
-  </noscript>
+  <h1>Pantallas</h1>
+  <div class="grid">
+    <a class="card" href="pantalla1.html">
+      <img class="thumb" src="img/pantalla1.png" alt="Pantalla 1"/>
+      <div class="title">Pantalla 1</div>
+    </a>
+    <a class="card" href="pantalla2.html">
+      <img class="thumb" src="img/pantalla2.png" alt="Pantalla 2"/>
+      <div class="title">Pantalla 2</div>
+    </a>
+    <a class="card" href="pantalla3.html">
+      <img class="thumb" src="img/pantalla3.png" alt="Pantalla 3"/>
+      <div class="title">Pantalla 3</div>
+    </a>
+    <a class="card" href="pantalla4.html">
+      <img class="thumb" src="img/pantalla4.png" alt="Pantalla 4"/>
+      <div class="title">Pantalla 4</div>
+    </a>
+    <a class="card" href="pantalla5.html">
+      <img class="thumb" src="img/pantalla5.png" alt="Pantalla 5"/>
+      <div class="title">Pantalla 5</div>
+    </a>
+    <a class="card" href="pantalla6.html">
+      <img class="thumb" src="img/pantalla6.png" alt="Pantalla 6"/>
+      <div class="title">Pantalla 6</div>
+    </a>
+    <a class="card" href="pantalla7.html">
+      <img class="thumb" src="img/pantalla7.png" alt="Pantalla 7"/>
+      <div class="title">Pantalla 7</div>
+    </a>
+    <a class="card" href="pantalla8.html">
+      <img class="thumb" src="img/pantalla8.png" alt="Pantalla 8"/>
+      <div class="title">Pantalla 8</div>
+    </a>
+    <a class="card" href="pantalla9.html">
+      <img class="thumb" src="img/pantalla9.png" alt="Pantalla 9"/>
+      <div class="title">Pantalla 9</div>
+    </a>
+    <a class="card" href="pantalla10.html">
+      <img class="thumb" src="img/pantalla10.png" alt="Pantalla 10"/>
+      <div class="title">Pantalla 10</div>
+    </a>
+    <a class="card" href="pantalla11.html">
+      <img class="thumb" src="img/pantalla11.png" alt="Pantalla 11"/>
+      <div class="title">Pantalla 11</div>
+    </a>
+    <a class="card" href="pantalla12.html">
+      <img class="thumb" src="img/pantalla12.png" alt="Pantalla 12"/>
+      <div class="title">Pantalla 12</div>
+    </a>
+  </div>
 </body>
 </html>
+
+<div onclick="window.location.href='pantalla3.html'" style="position:absolute;top:57.5%;left:20.51%;width:58%;height:5%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
