@@ -48,5 +48,15 @@
 <div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:25%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:31%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:37%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('✅ Checklist marcado')" style="position:absolute;top:43%;left:15%;width:40%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('📤 Informe enviado')" style="position:absolute;top:82%;left:25.64%;width:51.28%;height:6%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla2.html'" style="position:absolute;top:6%;left:13%;width:15%;height:7%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
   <div id="modal" class="modal hidden"><div id="modal-content" class="modal-content"></div></div>
   <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.hotspot').forEach(function(el){
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      var color = 'rgba(' + r + ', ' + g + ', ' + b + ', 0.2)';
+      el.style.backgroundColor = color;
+      el.style.border = '1px solid rgb(' + r + ', ' + g + ', ' + b + ')';
+    });
+  </script>
 </body>
 </html>
