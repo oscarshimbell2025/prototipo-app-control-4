@@ -7,7 +7,60 @@
   <link rel="stylesheet" href="css/style.css"/>
   <style>
     body {
-      background-image: url('img/pantalla1.png');
+      margin: 0;
+      height: 100vh;
+      background: url('img/pantalla1.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-container label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-container input {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    .form-container input:focus {
+      border-color: #d32f2f; /* rojo primario */
+    }
+
+    .form-container button {
+      background-color: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .form-container button:hover {
+      background-color: #b71c1c;
+    }
+    .form-container button:active {
+      transform: scale(0.98);
     }
   </style>
 </head>
