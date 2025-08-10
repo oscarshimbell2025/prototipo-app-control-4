@@ -36,11 +36,11 @@
   <!-- hotspots for activity registration -->
   <div class="hotspot" style="top:25%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openClima()"></div>
   <div class="hotspot" style="top:31.95%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openPersonal()"></div>
-  <div class="hotspot" style="top:38.05%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openMaquina()"></div>
+  <div class="hotspot" style="top:38.15%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openMaquina()"></div>
   <div class="hotspot" style="top:44.9%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openAvance()"></div>
-  <div class="hotspot" style="top:51%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openInstrucciones()"></div>
+  <div class="hotspot" style="top:51.2%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openInstrucciones()"></div>
   <div class="hotspot" style="top:57.95%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openVientos()"></div>
-  <div class="hotspot" style="top:64.3%;left:19.45%;width:60%;height:12%;z-index:999;" onclick="openFotos()"></div>
+  <div class="hotspot" style="top:64.35%;left:19.45%;width:60%;height:12%;z-index:999;" onclick="openFotos()"></div>
   <div class="hotspot" style="top:81.97%;left:19.45%;width:60%;height:3.96%;z-index:999;" onclick="generatePantalla5PDF()"></div>
   <div class="hotspot" style="top:6%;left:13%;width:15%;height:7%;z-index:999;" onclick="window.location.href='pantalla2.html'"></div>
 
@@ -56,9 +56,9 @@
   <script src="js/main.js"></script>
   <script>
     document.querySelectorAll('.hotspot').forEach(el => {
-      const r = Math.floor(Math.random() * 256);
-      const g = Math.floor(Math.random() * 256);
-      const b = Math.floor(Math.random() * 256);
+      const r = 255;
+      const g = 0;
+      const b = 0;
       const color = `rgba(${r}, ${g}, ${b}, 0.1)`;
       el.style.backgroundColor = color;
       el.style.border = `0px solid rgb(${r}, ${g}, ${b})`;
