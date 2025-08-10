@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<title>Pantalla5</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="stylesheet" href="css/style.css"/>
-<style>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <title>Pantalla5</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     html, body {
       margin: 0;
@@ -27,44 +21,36 @@
     .hotspot {
       position: absolute;
       cursor: pointer;
-      border-radius: 8px;
-      
+      border-radius: 8px;                   /* borde curveado */
+      background-color: rgba(255,0,0,0.03); /* rojo con 3% transparencia */
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <!-- hotspots for activity registration -->
-  <div class="hotspot" style="top:25%;left:19.45%;width:60.3%;height:4.55%;z-index:999;" onclick="openClima()"></div>
-  <div class="hotspot" style="top:31.94%;left:19.45%;width:60.3%;height:4.55%;z-index:999;" onclick="openPersonal()"></div>
-  <div class="hotspot" style="top:38.15%;left:19.45%;width:60.3%;height:4.55%;z-index:999;" onclick="openMaquina()"></div>
-  <div class="hotspot" style="top:44.89%;left:19.45%;width:60.3%;height:4.55%;z-index:999;" onclick="openAvance()"></div>
-  <div class="hotspot" style="top:51.2%;left:19.45%;width:60.3%;height:4.55%;z-index:999;" onclick="openInstrucciones()"></div>
-  <div class="hotspot" style="top:57.95%;left:19.45%;width:60.3%;height:4.55%;z-index:999;" onclick="openVientos()"></div>
-  <div class="hotspot" style="top:64.35%;left:19.45%;width:60.3%;height:12%;z-index:999;" onclick="openFotos()"></div>
-  <div class="hotspot" style="top:81.97%;left:19.45%;width:60.3%;height:3.93%;z-index:999;" onclick="generatePantalla5PDF()"></div>
-  <div class="hotspot" style="top:6%;left:13%;width:15%;height:7%;z-index:999;" onclick="window.location.href='pantalla2.html'"></div>
+  <!-- Hotspots -->
+  <div class="hotspot" style="top:25%;left:19.45%;width:60.3%;height:4.55%;" onclick="openClima()"></div>
+  <div class="hotspot" style="top:31.94%;left:19.45%;width:60.3%;height:4.55%;" onclick="openPersonal()"></div>
+  <div class="hotspot" style="top:38.15%;left:19.45%;width:60.3%;height:4.55%;" onclick="openMaquina()"></div>
+  <div class="hotspot" style="top:44.89%;left:19.45%;width:60.3%;height:4.55%;" onclick="openAvance()"></div>
+  <div class="hotspot" style="top:51.2%;left:19.45%;width:60.3%;height:4.55%;" onclick="openInstrucciones()"></div>
+  <div class="hotspot" style="top:57.95%;left:19.45%;width:60.3%;height:4.55%;" onclick="openVientos()"></div>
+  <div class="hotspot" style="top:64.35%;left:19.45%;width:60.3%;height:12%;" onclick="openFotos()"></div>
+  <div class="hotspot" style="top:81.97%;left:19.45%;width:60.3%;height:3.93%;" onclick="generatePantalla5PDF()"></div>
+  <div class="hotspot" style="top:6%;left:13%;width:15%;height:7%;" onclick="window.location.href='pantalla2.html'"></div>
 
+  <!-- Info containers -->
   <div id="personal-info" class="info" style="top:31%;left:60%;"></div>
   <div id="avance-info" class="info" style="top:43%;left:60%;"></div>
   <div id="fotos-container"></div>
 
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div id="modal-content" class="modal-content"></div>
+  </div>
 
-
-<div onclick="window.location.href='pantalla2.html'" style="position:absolute;top:6%;left:14%;width:15%;height:6.5%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
-  <div id="modal" class="modal hidden"><div id="modal-content" class="modal-content"></div></div>
-
+  <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script>
-    document.querySelectorAll('.hotspot').forEach(el => {
-      const r = 255;
-      const g = 0;
-      const b = 0;
-      const color = `rgba(${r}, ${g}, ${b}, 0.03)`;
-      el.style.backgroundColor = color;
-      el.style.border = `0px solid rgb(${r}, ${g}, ${b})`;
-    });
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
-</html>
 </html>
