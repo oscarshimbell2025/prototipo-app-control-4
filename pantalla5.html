@@ -27,7 +27,7 @@
     .hotspot {
       position: absolute;
       cursor: pointer;
-      border-radius: 6px;
+      border-radius: 8px;
       
     }
   </style>
@@ -41,7 +41,7 @@
   <div class="hotspot" style="top:51%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openInstrucciones()"></div>
   <div class="hotspot" style="top:57.95%;left:19.45%;width:60%;height:4.55%;z-index:999;" onclick="openVientos()"></div>
   <div class="hotspot" style="top:64.3%;left:19.45%;width:60%;height:12%;z-index:999;" onclick="openFotos()"></div>
-  <div class="hotspot" style="top:81.98%;left:19.45%;width:60%;height:3.98%;z-index:999;" onclick="generatePantalla5PDF()"></div>
+  <div class="hotspot" style="top:81.97%;left:19.45%;width:60%;height:3.96%;z-index:999;" onclick="generatePantalla5PDF()"></div>
   <div class="hotspot" style="top:6%;left:13%;width:15%;height:7%;z-index:999;" onclick="window.location.href='pantalla2.html'"></div>
 
   <div id="personal-info" class="info" style="top:31%;left:60%;"></div>
@@ -61,7 +61,7 @@
       const b = Math.floor(Math.random() * 256);
       const color = `rgba(${r}, ${g}, ${b}, 0.1)`;
       el.style.backgroundColor = color;
-      el.style.border = `1px solid rgb(${r}, ${g}, ${b})`;
+      el.style.border = `8px solid rgb(${r}, ${g}, ${b})`;
     });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
