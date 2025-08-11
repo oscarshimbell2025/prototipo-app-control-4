@@ -3,39 +3,46 @@
 <head>
   <meta charset="utf-8"/>
   <title>Pantalla7</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+    html, body { margin: 0; padding: 0; height: 100%; }
     body {
       background: url('img/pantalla7.png') no-repeat center top;
       background-size: contain;
-      background-repeat: no-repeat;
       background-position: top;
       background-color: #fff;
     }
     .hotspot {
       position: absolute;
       cursor: pointer;
-      border-radius: 8px;
+      border-radius: 8px;                   /* borde curvo */
+      background-color: rgba(255,0,0,0.03); /* rojo 3% transparencia */
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <div class="hotspot" style="top:58%;left:18.5%;width:45%;height:7%;z-index:999;" onclick="window.location.href='pantalla12.html'"></div>
-  <div class="hotspot" style="top:64%;left:18.5%;width:45%;height:7%;z-index:999;" onclick="window.location.href='pantalla12.html'"></div>
-  <div class="hotspot" style="top:82%;left:25.64%;width:51.28%;height:5%;z-index:999;" onclick="alert('📊 Informe generado')"></div>
-  <div class="hotspot" style="top:75%;left:15.38%;width:25.64%;height:6%;z-index:999;" onclick="exportPantalla5PDF()"></div>
-  <div class="hotspot" style="top:75%;left:51.28%;width:25.64%;height:6%;z-index:999;" onclick="alert('📊 Generando Excel...')"></div>
-  <div class="hotspot" style="top:8%;left:12%;width:15%;height:7%;z-index:999;" onclick="window.location.href='pantalla2.html'"></div>
+  <div class="hotspot" style="top:58%; left:18.5%; width:45%; height:7%;"
+       onclick="window.location.href='pantalla12.html'"></div>
+
+  <div class="hotspot" style="top:64%; left:18.5%; width:45%; height:7%;"
+       onclick="window.location.href='pantalla12.html'"></div>
+
+  <div class="hotspot" style="top:82%; left:25.64%; width:51.28%; height:5%;"
+       onclick="alert('📊 Informe generado')"></div>
+
+  <div class="hotspot" style="top:75%; left:15.38%; width:25.64%; height:6%;"
+       onclick="exportPantalla5PDF()"></div>
+
+  <div class="hotspot" style="top:75%; left:51.28%; width:25.64%; height:6%;"
+       onclick="alert('📊 Generando Excel...')"></div>
+
+  <div class="hotspot" style="top:8%; left:12%; width:15%; height:7%;"
+       onclick="window.location.href='pantalla2.html'"></div>
 
   <div id="modal" class="modal hidden"><div id="modal-content" class="modal-content"></div></div>
 
   <script src="js/main.js"></script>
 </body>
 </html>
-
