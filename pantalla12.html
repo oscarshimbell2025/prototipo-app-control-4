@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<title>Pantalla12</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="stylesheet" href="css/style.css"/>
-<style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+  <meta charset="utf-8"/>
+  <title>Pantalla12</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
     body {
       background: url('img/pantalla12.png') no-repeat center top;
       background-size: contain;
-      background-repeat: no-repeat;
       background-position: top;
       background-color: #fff;
     }
     .hotspot {
       position: absolute;
       cursor: pointer;
-      border-radius: 8px;
-      
+      border-radius: 8px;                   /* borde curvo */
+      background-color: rgba(255,0,0,0.03); /* rojo 3% transparencia */
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
+  <div class="hotspot"
+       style="top:29.61%; left:15%; width:62%; height:17%;"
+       onclick="alert('🔍 No implementado')"></div>
 
+  <div class="hotspot"
+       style="top:46%; left:17%; width:62%; height:17%;"
+       onclick="alert('🔍 Indicador implementado')"></div>
 
-<div onclick="alert('🔍 No implementado')" style="position:absolute;top:29.61%;left:15%;width:62%;height:17%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('🔍 Indicador implementado')" style="position:absolute;top:46%;left:17%;width:62%;height:17%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla2.html'" style="position:absolute;top:8%;left:12%;width:12%;height:7%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
-<div class="hotspot" onclick="alert('🔍 No implementado')" style="position:absolute;top:29.61%;left:15%;width:62%;height:17%;z-index:999;"></div><div class="hotspot" onclick="alert('🔍 Indicador implementado')" style="position:absolute;top:46%;left:17%;width:62%;height:17%;z-index:999;"></div><div class="hotspot" onclick="window.location.href='pantalla2.html'" style="position:absolute;top:8%;left:12%;width:12%;height:7%;z-index:999;"></div>  <script src="js/main.js"></script>
-</body></html>
+  <div class="hotspot"
+       style="top:8%; left:12%; width:12%; height:7%;"
+       onclick="window.location.href='pantalla2.html'"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
