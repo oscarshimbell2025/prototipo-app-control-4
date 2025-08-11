@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<title>Pantalla4</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="stylesheet" href="css/style.css"/>
-<style>
+  <meta charset="utf-8"/>
+  <title>Pantalla4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
     html, body {
       margin: 0;
       padding: 0;
@@ -15,22 +14,33 @@
     body {
       background: url('img/pantalla4.png') no-repeat center top;
       background-size: contain;
-      background-repeat: no-repeat;
       background-position: top;
       background-color: #fff;
     }
     .hotspot {
       position: absolute;
       cursor: pointer;
-      border-radius: 8px;
-      
+      border-radius: 8px;                   /* borde curvo */
+      background-color: rgba(255,0,0,0.03); /* rojo 3% transparencia */
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
+  <!-- Hotspots únicos -->
+  <div class="hotspot"
+       style="top:10%; left:12%; width:15%; height:6%;"
+       onclick="window.location.href='pantalla2.html'"></div>
 
+  <div class="hotspot"
+       style="top:75%; left:12%; width:30%; height:8%;"
+       onclick="window.location.href='pantalla5.html'"></div>
 
-<div onclick="window.location.href='pantalla2.html'" style="position:absolute;top:10%;left:12%;width:15%;height:6%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla5.html'" style="position:absolute;top:75%;left:12%;width:30%;height:8%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla8.html'" style="position:absolute;top:75%;left:51.28%;width:30%;height:8%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
-<div class="hotspot" onclick="window.location.href='pantalla2.html'" style="position:absolute;top:10%;left:12%;width:15%;height:6%;z-index:999;"></div><div class="hotspot" onclick="window.location.href='pantalla5.html'" style="position:absolute;top:75%;left:12%;width:30%;height:8%;z-index:999;"></div><div class="hotspot" onclick="window.location.href='pantalla8.html'" style="position:absolute;top:75%;left:51.28%;width:30%;height:8%;z-index:999;"></div>  <script src="js/main.js"></script>
-</body></html>
+  <div class="hotspot"
+       style="top:75%; left:51.28%; width:30%; height:8%;"
+       onclick="window.location.href='pantalla8.html'"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
