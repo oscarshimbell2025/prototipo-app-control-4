@@ -6,57 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+    html, body { margin: 0; padding: 0; height: 100%; }
     body {
       background: url('img/pantalla8.png') no-repeat center top;
       background-size: contain;
       background-position: top;
       background-color: #fff;
+      font-family: 'Inter', sans-serif;
     }
     .hotspot {
       position: absolute;
       cursor: pointer;
       border-radius: 8px;                   /* borde curvo */
-      background-color: rgba(17, 0, 255, 0.3); /* rojo 3% transparencia */
+      background-color: rgba(255,0,0,0.03); /* rojo 3% */
       z-index: 999;
+      outline: none;
+    }
+    .hotspot:focus-visible,
+    .hotspot:hover { box-shadow: 0 0 0 3px rgba(229,57,53,0.15) inset; }
+
+    .text-field {
+      position: absolute;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 14px;
+      box-sizing: border-box;
+      outline: none;
+      z-index: 999;
+    }
+    .text-field:focus {
+      border-color: #E53935;
+      box-shadow: 0 0 0 3px rgba(229,57,53,0.15);
     }
   </style>
 </head>
 <body>
 
-  <!-- Hotspots únicos -->
+  <!-- Hotspots -->
   <div class="hotspot"
        style="top:19.5%; left:18.5%; width:63%; height:7.5%;"
-       onclick="alert('📷 Asistencia del personal registrada')"></div>
+       onclick="alert('📷 Asistencia del personal registrada')" tabindex="0"></div>
 
   <div class="hotspot"
        style="top:28.5%; left:18.5%; width:63%; height:7.6%;"
-       onclick="alert('📷 Uso de EPP registrado')"></div>
+       onclick="alert('📷 Uso de EPP registrado')" tabindex="0"></div>
 
   <div class="hotspot"
        style="top:37.5%; left:18.5%; width:63%; height:7.7%;"
-       onclick="alert('📷 Actividades del día')"></div>
+       onclick="alert('📷 Actividades del día')" tabindex="0"></div>
 
   <div class="hotspot"
        style="top:46.5%; left:18.5%; width:63%; height:7.8%;"
-       onclick="alert('📷 Limpieza del área registrada')"></div>
+       onclick="alert('📷 Limpieza del área registrada')" tabindex="0"></div>
 
-    <div class="hotspot"
+  <div class="hotspot"
        style="top:55%; left:18.5%; width:63%; height:7.8%;"
-       onclick="alert('📊 Seguridad registrada')"></div>
-    
-    <div class="hotspot"
+       onclick="alert('📊 Seguridad registrada')" tabindex="0"></div>
+
+  <div class="hotspot"
        style="top:74.5%; left:18.5%; width:63%; height:4.5%;"
-       onclick="alert('📊 Checklist confirmado')"></div>
+       onclick="alert('📊 Checklist confirmado')" tabindex="0"></div>
 
   <div class="hotspot"
        style="top:6%; left:15%; width:15%; height:6.5%;"
-       onclick="window.location.href='pantalla2.html'"></div>
+       onclick="window.location.href='pantalla2.html'" tabindex="0"></div>
+
+  <!-- Campo de texto -->
+  <input type="text"
+         class="text-field"
+         style="top:85%; left:18.5%; width:63%; height:4.5%;"
+         placeholder="Escribe aquí..." />
 
   <script src="js/main.js"></script>
 </body>
 </html>
+
