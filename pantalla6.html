@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<title>Pantalla6</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="stylesheet" href="css/style.css"/>
-<style>
+  <meta charset="utf-8"/>
+  <title>Pantalla6</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
     html, body {
       margin: 0;
       padding: 0;
@@ -15,23 +14,37 @@
     body {
       background: url('img/pantalla6.png') no-repeat center top;
       background-size: contain;
-      background-repeat: no-repeat;
       background-position: top;
       background-color: #fff;
     }
     .hotspot {
       position: absolute;
       cursor: pointer;
-      border-radius: 8px;
-      
+      border-radius: 8px;                   /* borde curvo */
+      background-color: rgba(255,0,0,0.03); /* rojo 3% transparencia */
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
+  <!-- Hotspots únicos -->
+  <div class="hotspot"
+       style="top:72%; left:17%; width:25.64%; height:6.5%;"
+       onclick="alert('📄 Aprobando...')"></div>
 
+  <div class="hotspot"
+       style="top:72%; left:53%; width:25.64%; height:6.5%;"
+       onclick="alert('📊 Observación enviada')"></div>
 
+  <div class="hotspot"
+       style="top:79%; left:28.21%; width:41.03%; height:6%;"
+       onclick="window.location.href='pantalla1.html'"></div>
 
-<div onclick="alert('📄 Aprobando...')" style="position:absolute;top:72%;left:17%;width:25.64%;height:6.5%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('📊 Observación enviada')" style="position:absolute;top:72%;left:53%;width:25.64%;height:6.5%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla1.html'" style="position:absolute;top:79%;left:28.21%;width:41.03%;height:6%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla2.html'" style="position:absolute;top:8%;left:12%;width:15%;height:7%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
-<div class="hotspot" onclick="alert('📄 Aprobando...')" style="position:absolute;top:72%;left:17%;width:25.64%;height:6.5%;z-index:999;"></div><div class="hotspot" onclick="alert('📊 Observación enviada')" style="position:absolute;top:72%;left:53%;width:25.64%;height:6.5%;z-index:999;"></div><div class="hotspot" onclick="window.location.href='pantalla1.html'" style="position:absolute;top:79%;left:28.21%;width:41.03%;height:6%;z-index:999;"></div><div class="hotspot" onclick="window.location.href='pantalla2.html'" style="position:absolute;top:8%;left:12%;width:15%;height:7%;z-index:999;"></div>  <script src="js/main.js"></script>
-</body></html>
+  <div class="hotspot"
+       style="top:8%; left:12%; width:15%; height:7%;"
+       onclick="window.location.href='pantalla2.html'"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
