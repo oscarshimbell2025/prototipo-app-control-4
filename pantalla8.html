@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="utf-8"/>
-<title>Pantalla8</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link rel="stylesheet" href="css/style.css"/>
-<style>
+  <meta charset="utf-8"/>
+  <title>Pantalla8</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
     html, body {
       margin: 0;
       padding: 0;
@@ -15,24 +14,45 @@
     body {
       background: url('img/pantalla8.png') no-repeat center top;
       background-size: contain;
-      background-repeat: no-repeat;
       background-position: top;
       background-color: #fff;
     }
     .hotspot {
       position: absolute;
       cursor: pointer;
-      border-radius: 8px;
-      
+      border-radius: 8px;                   /* borde curvo */
+      background-color: rgba(255,0,0,0.3); /* rojo 3% transparencia */
+      z-index: 999;
     }
   </style>
 </head>
 <body>
 
+  <!-- Hotspots únicos -->
+  <div class="hotspot"
+       style="top:20%; left:18%; width:60%; height:3.55%;"
+       onclick="alert('📷 Foto adjunta')"></div>
 
+  <div class="hotspot"
+       style="top:32%; left:18.5%; width:60%; height:3.55%;"
+       onclick="alert('📷 Foto adjunta')"></div>
 
+  <div class="hotspot"
+       style="top:42%; left:19%; width:60%; height:3.55%;"
+       onclick="alert('📷 Foto adjunta')"></div>
 
+  <div class="hotspot"
+       style="top:52%; left:19.5%; width:60%; height:3.55%;"
+       onclick="alert('📷 Foto adjunta')"></div>
 
-<div onclick="alert('📷 Foto adjunta')" style="position:absolute;top:20%;left:15%;width:60%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('📷 Foto adjunta')" style="position:absolute;top:32%;left:15%;width:60%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('📷 Foto adjunta')" style="position:absolute;top:42%;left:15%;width:60%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('📷 Foto adjunta')" style="position:absolute;top:52%;left:15%;width:60%;height:3.55%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="alert('📊 Checklist confirmado')" style="position:absolute;top:75%;left:25.64%;width:51.28%;height:6%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div><div onclick="window.location.href='pantalla2.html'" style="position:absolute;top:8%;left:12%;width:15%;height:7%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
-<div class="hotspot" onclick="alert('📷 Foto adjunta')" style="position:absolute;top:20%;left:15%;width:60%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('📷 Foto adjunta')" style="position:absolute;top:32%;left:15%;width:60%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('📷 Foto adjunta')" style="position:absolute;top:42%;left:15%;width:60%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('📷 Foto adjunta')" style="position:absolute;top:52%;left:15%;width:60%;height:3.55%;z-index:999;"></div><div class="hotspot" onclick="alert('📊 Checklist confirmado')" style="position:absolute;top:75%;left:25.64%;width:51.28%;height:6%;z-index:999;"></div><div class="hotspot" onclick="window.location.href='pantalla2.html'" style="position:absolute;top:8%;left:12%;width:15%;height:7%;z-index:999;"></div>  <script src="js/main.js"></script>
-</body></html>
+  <div class="hotspot"
+       style="top:72%; left:20%; width:62%; height:6%;"
+       onclick="alert('📊 Checklist confirmado')"></div>
+
+  <div class="hotspot"
+       style="top:5.5%; left:12%; width:15%; height:7%;"
+       onclick="window.location.href='pantalla2.html'"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
