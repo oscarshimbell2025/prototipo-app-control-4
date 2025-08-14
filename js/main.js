@@ -80,22 +80,23 @@ function openMaquina(){
       img.src=src; img.style.width='60px'; img.style.marginRight='5px';
       content.appendChild(img);
     });
-    content.appendChild(createButtons(closeModal,()=>{
+    content.appendChild(createButtons(closeModal, async ()=>{
       localStorage.setItem('maquinaDesc',desc.value);
+      let urls=[];
       if(file.files.length>0){
-        const readers=[];
-        for(const f of file.files){
-          const r=new FileReader();
-          readers.push(new Promise(res=>{r.onload=e=>res(e.target.result);r.readAsDataURL(f);}));
+        const form=new FormData();
+        for(const f of file.files) form.append('files',f);
+        try{
+          const res=await fetch('/upload',{method:'POST',body:form});
+          const data=await res.json();
+          urls=data.urls||[];
+        }catch(err){
+          console.error('Error subiendo archivos',err);
         }
-        Promise.all(readers).then(images=>{
-          const all=existing.concat(images);
-          localStorage.setItem('maquinaFotos',JSON.stringify(all));
-          displayAllPhotos();
-        });
-      } else {
-        displayAllPhotos();
       }
+      const all=existing.concat(urls);
+      localStorage.setItem('maquinaFotos',JSON.stringify(all));
+      displayAllPhotos();
       alert('guardado con éxito');
       closeModal();
     }));
@@ -144,20 +145,23 @@ function openFotos(){
     file.capture='environment';
     file.multiple=true;
     content.appendChild(file);
-    content.appendChild(createButtons(closeModal,()=>{
+    content.appendChild(createButtons(closeModal, async ()=>{
+      let urls=[];
       if(file.files.length>0){
-        const readers=[];
-        for(const f of file.files){
-          const r=new FileReader();
-          readers.push(new Promise(res=>{r.onload=e=>res(e.target.result);r.readAsDataURL(f);}));
+        const form=new FormData();
+        for(const f of file.files) form.append('files',f);
+        try{
+          const res=await fetch('/upload',{method:'POST',body:form});
+          const data=await res.json();
+          urls=data.urls||[];
+        }catch(err){
+          console.error('Error subiendo archivos',err);
         }
-        Promise.all(readers).then(images=>{
-          const existing=JSON.parse(localStorage.getItem('extraFotos')||'[]');
-          const all=existing.concat(images);
-          localStorage.setItem('extraFotos',JSON.stringify(all));
-          displayAllPhotos();
-        });
       }
+      const existing=JSON.parse(localStorage.getItem('extraFotos')||'[]');
+      const all=existing.concat(urls);
+      localStorage.setItem('extraFotos',JSON.stringify(all));
+      displayAllPhotos();
       alert('guardado con éxito');
       closeModal();
     }));
@@ -170,9 +174,9 @@ function displayAllPhotos(){
   container.innerHTML='';
   const all=[...JSON.parse(localStorage.getItem('maquinaFotos')||'[]'),
              ...JSON.parse(localStorage.getItem('extraFotos')||'[]')];
-  all.forEach(src=>{
+  all.forEach(url=>{
     const img=document.createElement('img');
-    img.src=src;
+    img.src=url;
     container.appendChild(img);
   });
 }
