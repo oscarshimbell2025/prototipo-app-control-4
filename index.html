@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Demo — App Control de Obra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo — App Control de Obra</title>
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
     body { margin: 0; padding: 24px; background:#fafafa; }
@@ -13,32 +13,6 @@
     a.card {
       display:block; text-decoration:none; color:inherit; border:1px solid #e5e7eb; border-radius:12px;
       background:#fff; padding:12px; transition: box-shadow .2s, transform .05s;
-    }
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contenido</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    body {
-      background: url('img/pantalla1.png') no-repeat center top;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: top;
-      background-color: #fff;
-      padding: 20px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-    }
-    .hotspot {
-      position: absolute;
-      cursor: pointer;
-    a.card {
-      text-decoration: none;
-      color: inherit;
-      display: block;
     }
     a.card:hover { box-shadow: 0 6px 18px rgba(0,0,0,.08); }
     a.card:active { transform: translateY(1px); }
@@ -60,20 +34,18 @@
 <body>
   <h1>Prototipo navegable</h1>
   <div class="grid">
-    <a class="card" href="pantalla1.html"><img class="thumb" src="img/pantalla1.png"><div class="title">pantalla1</div></a>
-    <a class="card" href="pantalla2.html"><img class="thumb" src="img/pantalla2.png"><div class="title">pantalla2</div></a>
-    <a class="card" href="pantalla3.html"><img class="thumb" src="img/pantalla3.png"><div class="title">pantalla3</div></a>
-    <a class="card" href="pantalla4.html"><img class="thumb" src="img/pantalla4.png"><div class="title">pantalla4</div></a>
-    <a class="card" href="pantalla5.html"><img class="thumb" src="img/pantalla5.png"><div class="title">pantalla5</div></a>
-    <a class="card" href="pantalla6.html"><img class="thumb" src="img/pantalla6.png"><div class="title">pantalla6</div></a>
-    <a class="card" href="pantalla7.html"><img class="thumb" src="img/pantalla7.png"><div class="title">pantalla7</div></a>
-    <a class="card" href="pantalla8.html"><img class="thumb" src="img/pantalla8.png"><div class="title">pantalla8</div></a>
-    <a class="card" href="pantalla9.html"><img class="thumb" src="img/pantalla9.png"><div class="title">pantalla9</div></a>
-    <a class="card" href="pantalla10.html"><img class="thumb" src="img/pantalla10.png"><div class="title">pantalla10</div></a>
-    <a class="card" href="pantalla11.html"><img class="thumb" src="img/pantalla11.png"><div class="title">pantalla11</div></a>
-    <a class="card" href="pantalla12.html"><img class="thumb" src="img/pantalla12.png"><div class="title">pantalla12</div></a>
+    <a class="card" href="pantalla1.html"><img class="thumb" src="img/pantalla1.png" alt="pantalla1"><div class="title">pantalla1</div></a>
+    <a class="card" href="pantalla2.html"><img class="thumb" src="img/pantalla2.png" alt="pantalla2"><div class="title">pantalla2</div></a>
+    <a class="card" href="pantalla3.html"><img class="thumb" src="img/pantalla3.png" alt="pantalla3"><div class="title">pantalla3</div></a>
+    <a class="card" href="pantalla4.html"><img class="thumb" src="img/pantalla4.png" alt="pantalla4"><div class="title">pantalla4</div></a>
+    <a class="card" href="pantalla5.html"><img class="thumb" src="img/pantalla5.png" alt="pantalla5"><div class="title">pantalla5</div></a>
+    <a class="card" href="pantalla6.html"><img class="thumb" src="img/pantalla6.png" alt="pantalla6"><div class="title">pantalla6</div></a>
+    <a class="card" href="pantalla7.html"><img class="thumb" src="img/pantalla7.png" alt="pantalla7"><div class="title">pantalla7</div></a>
+    <a class="card" href="pantalla8.html"><img class="thumb" src="img/pantalla8.png" alt="pantalla8"><div class="title">pantalla8</div></a>
+    <a class="card" href="pantalla9.html"><img class="thumb" src="img/pantalla9.png" alt="pantalla9"><div class="title">pantalla9</div></a>
+    <a class="card" href="pantalla10.html"><img class="thumb" src="img/pantalla10.png" alt="pantalla10"><div class="title">pantalla10</div></a>
+    <a class="card" href="pantalla11.html"><img class="thumb" src="img/pantalla11.png" alt="pantalla11"><div class="title">pantalla11</div></a>
+    <a class="card" href="pantalla12.html"><img class="thumb" src="img/pantalla12.png" alt="pantalla12"><div class="title">pantalla12</div></a>
   </div>
 </body>
 </html>
-
-<div onclick="window.location.href='pantalla3.html'" style="position:absolute;top:57.5%;left:20.51%;width:58%;height:5%;background-color:rgba(255,0,0,0.1);z-index:999;cursor:pointer;"></div></body></html>
